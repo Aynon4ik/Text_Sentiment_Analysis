@@ -26,8 +26,7 @@
 
 
 ### 2. Запуск скрипта
-Сохраните файл с названием `sentiment_analysis.py` и запустите его: python sentiment_analysis.py
-
+Сохраните файл с названием `sentiment_analysis.py` и запустите его
 
 ---
 
