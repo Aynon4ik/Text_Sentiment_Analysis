@@ -8,7 +8,7 @@ def recognize_speech_from_file(audio_file):
     try:
         with sr.AudioFile(audio_file) as source:
             print("Загрузка аудио...")
-            audio_data = recognizer.record(source)  # Чтение аудиоданных
+            audio_data = recognizer.record(source)
 
         print("Распознавание речи...")
         text = recognizer.recognize_google(audio_data, language="ru-RU")
@@ -26,8 +26,8 @@ def recognize_speech_from_microphone():
     try:
         with sr.Microphone() as source:
             print("Говорите что-нибудь...")
-            recognizer.adjust_for_ambient_noise(source)  # Подстройка под шум
-            audio_data = recognizer.listen(source)  # Прослушивание
+            recognizer.adjust_for_ambient_noise(source)
+            audio_data = recognizer.listen(source)
 
         print("Распознавание речи...")
         text = recognizer.recognize_google(audio_data, language="ru-RU")
@@ -39,7 +39,6 @@ def recognize_speech_from_microphone():
         print(f"Ошибка сервиса распознавания: {e}")
 
 
-# Пример использования
 if __name__ == "__main__":
     print("Выберите режим работы:")
     print("1 - Распознавание речи из аудиофайла")
